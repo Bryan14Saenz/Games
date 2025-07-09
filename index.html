@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- Idioma -->
+<html lang="es">
+  <head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bryan14Saenz" />
+    <meta name="copyright" content="Bryan14Saenz" />
+    <meta name="description" content="Web con juegos interactivos" />
+    <meta name="keywords" content="Games, Piedra, Papel, Tijera, Laberinto" />
+    <meta name="robots" content="index, follow, noarchive" />
+    <meta name="OG:Title" content="Games For B14S | Bryan14Saenz" />
+    <meta name="OG:Description" content="Web con juegos interactivos" />
+    <meta name="OG:Image" content="Assets/Svg/icon.svg" />
+    <meta name="OG:Url" content="https://gamesforb14s.netlify.app/" />
+    <meta name="OG:Type" content="website" />
+    <!-- Script -->
+    <script src="Js/script.js" defer></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="Css/output.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/Svg/icon.svg" type="image/x-icon" />
+    <!-- Titulo -->
+    <title>Games For B14S</title>
+  </head>
+
+  <body class="flex items-center justify-center h-screen bg-gray-900">
+    <!-- Carga -->
+    <div
+      id="carga"
+      class="flex items-center justify-center gap-4 w-full h-full"
+    >
+      <div
+        class="size-10 rounded-full border-10 border-t-10 border-b-10 animate-spin border-gray-900 border-y-white"
+      ></div>
+      <h2 class="text-4xl font-bold text-white">Cargando...</h2>
+    </div>
+    <!-- Main -->
+    <main id="main" class="hidden text-center">
+      <h1 class="text-4xl font-bold text-white max-sm:text-3xl">Games For B14S</h1>
+      <div class="flex items-center justify-center gap-6 mt-10 max-sm:flex-col">
+        <button
+          id="btnClasico"
+          class="size-32 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 max-sm:size-16"
+        >
+          <img src="Assets/Img/Clasic.png" alt="Piedra, Papel o Tijera" />
+        </button>
+        <button
+          id="btnAvanzado"
+          class="size-32 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 max-sm:size-16"
+        >
+          <img
+            src="Assets/Img/Avanzado.png"
+            alt="Piedra, Papel o Tijera Avanzado"
+          />
+        </button>
+        <button
+          id="btnLaberinto"
+          class="size-32 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 max-sm:size-16"
+        >
+          <img src="Assets/Img/Laberinto.png" alt="Laberinto" />
+        </button>
+      </div>
+      <p class="mt-10 text-white">
+        Hecho por
+        <a
+          href="https://github.com/Bryan14Saenz"
+          target="_blank"
+          class="underline"
+          >Bryan14Saenz</a
+        >
+      </p>
+    </main>
+    <!-- Clásico -->
+    <div id="clasico" class="hidden relative w-full h-full">
+      <button
+        class="btnAtras absolute top-4 left-4 cursor-pointer hover:scale-95 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl font-bold bg-cyan-50 max-sm:top-2 max-sm:left-2 max-sm:px-2 max-sm:py-1 max-sm:text-sm"
+      >
+        Volver
+      </button>
+      <div class="flex flex-col items-center justify-center h-full gap-4 max-sm:text-center">
+        <h2 class="text-4xl font-bold text-white max-sm:text-2xl">Piedra, Papel o Tijera</h2>
+        <p class="text-lg font-bold text-white max-sm:text-sm">
+          Selecciona una opción para jugar:
+        </p>
+        <div class="flex items-center justify-center gap-4">
+          <button
+            id="btnPiedra"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            🪨
+          </button>
+          <button
+            id="btnPapel"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            📃
+          </button>
+          <button
+            id="btnTijera"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            ✂️
+          </button>
+        </div>
+        <div
+          id="resultadoJuego1"
+          class="max-h-[25vh] mt-6 p-4 border border-gray-500 overflow-auto max-sm:border-none max-sm:max-h-[20vh] max-sm:mt-4"
+        ></div>
+        <div id="puntuacion" class="text-lg font-bold text-white max-sm:text-sm">
+          Puntuación
+          <span id="puntosJugador" class="text-green-500">0</span> -
+          <span id="puntosComputer" class="text-red-500">0</span>
+        </div>
+      </div>
+    </div>
+    <!-- Avanzado -->
+    <div id="avanzado" class="hidden w-full h-full">
+      <button
+        class="btnAtras absolute top-4 left-4 cursor-pointer hover:scale-95 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl font-bold bg-cyan-50 max-sm:top-2 max-sm:left-2 max-sm:px-2 max-sm:py-1 max-sm:text-sm"
+      >
+        Volver
+      </button>
+      <div class="flex flex-col items-center justify-center h-full gap-4 max-sm:text-center">
+        <h2 class="text-4xl font-bold text-white max-sm:text-2xl">
+          Piedra, Papel, Tijera, Lagarto o Spock
+        </h2>
+        <p class="text-lg font-bold text-white max-sm:text-sm">
+          Selecciona una opción para jugar:
+        </p>
+        <div class="flex items-center justify-center gap-2 max-sm:flex-wrap">
+          <button
+            id="btnPiedraJ2"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            🪨
+          </button>
+          <button
+            id="btnPapelJ2"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            📃
+          </button>
+          <button
+            id="btnTijeraJ2"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            ✂️
+          </button>
+          <button
+            id="btnLagartoJ2"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            🦎
+          </button>
+          <button
+            id="btnSpockJ2"
+            class="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl text-3xl font-bold bg-gray-800 text-white max-sm:text-2xl"
+          >
+            🖖
+          </button>
+        </div>
+        <div
+          id="resultadoJuego2"
+          class="max-h-[25vh] mt-6 p-4 border border-gray-500 overflow-auto max-sm:border-none max-sm:max-h-[20vh] max-sm:mt-4"
+        ></div>
+        <div id="puntuacionJ2" class="text-lg font-bold text-white max-sm:text-sm">
+          Puntuación
+          <span id="puntosJugadorJ2" class="text-green-500">0</span> -
+          <span id="puntosComputerJ2" class="text-red-500">0</span>
+        </div>
+      </div>
+    </div>
+    <!-- Laberinto -->
+    <div id="laberinto" class="hidden relative">
+      <button
+        class="btnAtras absolute top-4 left-4 cursor-pointer hover:scale-95 active:scale-95 transition-all duration-300 px-4 py-2 rounded-2xl font-bold bg-cyan-50 max-sm:top-2 max-sm:left-2 max-sm:px-2 max-sm:py-1 max-sm:text-sm"
+      >
+        Volver
+      </button>
+    </div>
+  </body>
+</html>
