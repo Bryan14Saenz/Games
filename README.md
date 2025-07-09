@@ -1,6 +1,6 @@
 # 🎮 Games For B14S
 
-**Games For B14S** es un sitio web con una colección de juegos interactivos desarrollados con JavaScript, HTML y Tailwind CSS. Actualmente incluye versiones del clásico *Piedra, Papel o Tijera*, una versión avanzada con *Lagarto y Spock*, y un juego de laberinto en construcción.
+**Games For B14S** es un sitio web con una colección de juegos interactivos desarrollados con JavaScript, HTML y Tailwind CSS. Actualmente incluye versiones del clásico *Piedra, Papel o Tijera*, una versión avanzada con *Lagarto y Spock*, y un juego de laberinto.
 
 ---
 
@@ -16,7 +16,6 @@ Al ingresar, el usuario ve una pantalla de carga y luego puede seleccionar entre
 - HTML5 semántico  
 - Tailwind CSS  
 - JavaScript (manipulación DOM, lógica de juego)  
-- Responsive Design (Mobile First)  
 - Favicon personalizado (SVG)  
 - SEO básico con etiquetas meta
 
@@ -29,7 +28,6 @@ Al ingresar, el usuario ve una pantalla de carga y luego puede seleccionar entre
 - **Piedra, Papel o Tijera clásico**: con emojis y puntuación en tiempo real.  
 - **Versión avanzada (Lagarto y Spock)**: siguiendo las reglas extendidas.  
 - **Laberinto**: sección futura para un minijuego de tipo laberinto.  
-- **Footer personalizado** con autoría y contacto.
 
 ---
 
@@ -55,7 +53,6 @@ Al ingresar, el usuario ve una pantalla de carga y luego puede seleccionar entre
 
 ## 🛠️ En desarrollo
 
-- [ ] Lógica y visual del juego de laberinto  
 - [ ] Efectos de sonido para jugadas  
 - [ ] Animaciones de transición entre pantallas  
 - [ ] Guardado de puntuación local (localStorage)  
